@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateApiDDD.Api", "TemplateApiDDD\TemplateApiDDD.Api.csproj", "{99FE8D19-5FD0-413A-AA74-A3B010AB0B55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemplateApiDDD.Api", "TemplateApiDDD\TemplateApiDDD.Api.csproj", "{99FE8D19-5FD0-413A-AA74-A3B010AB0B55}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TemplateApiDDD.Data", "TemplateApiDDD.Data", "{1D594C1D-83D2-4F39-8179-F061D3977692}"
 EndProject
@@ -13,11 +13,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TemplateApiDDD.Service", "T
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TemplateApiDDD.API", "TemplateApiDDD.API", "{44B15ECD-B9A2-4C77-B66B-CAD3A831EA8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "TemplateApiDDD.Entity\Entity.csproj", "{6D3D06BE-45D9-4D66-AB92-C14B7C4F5986}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entity", "TemplateApiDDD.Entity\Entity.csproj", "{6D3D06BE-45D9-4D66-AB92-C14B7C4F5986}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{96E6A11A-160C-4EBD-BBCD-8865BC38BAD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{96E6A11A-160C-4EBD-BBCD-8865BC38BAD4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{429584AA-23ED-41B7-97C9-D061F7E64050}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{429584AA-23ED-41B7-97C9-D061F7E64050}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

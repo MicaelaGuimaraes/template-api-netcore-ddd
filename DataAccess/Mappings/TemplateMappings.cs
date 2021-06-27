@@ -13,7 +13,7 @@ namespace DataAccess.Mappings
         {
             builder.ToTable("Template");
             builder.HasKey("Id");
-            builder.Property(x => x.Name);
+            builder.Property(x => x.Name).HasColumnType("varchar(max)");
         }
     }
 }

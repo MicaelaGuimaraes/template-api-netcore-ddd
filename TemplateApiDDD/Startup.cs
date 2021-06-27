@@ -36,8 +36,8 @@ namespace TemplateApiDDD
             services.AddControllersWithViews()
                     .AddNewtonsoftJson(options =>
                     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
-            services.AddDbContext<Context>(options => options.UseSqlServer(Configuration.GetConnectionString("DataConnectionString")));
 
+            //services.AddDbContext<Context>(options => options.UseSqlServer(Configuration.GetConnectionString("DataConnectionString")));
 
             services.AddResponseCompression();
 
@@ -84,6 +84,7 @@ namespace TemplateApiDDD
             {
                 app.UseDeveloperExceptionPage();
             }
+
             app.UseCors("CorsPolicy");
 
             app.UseMvc();

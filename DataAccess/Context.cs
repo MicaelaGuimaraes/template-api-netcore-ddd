@@ -9,19 +9,18 @@ namespace DataAccess
 {
     public class Context : DbContext
     {
-        public Context(DbContextOptions<Context> options)
-            : base(options)
-        {
-        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            optionsBuilder.UseSqlServer(
+               @"Server=serverTemplate;Initial Catalog=Template;Persist Security Info=False;User ID=template;Password=template;");
         }
+
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfiguration(new TemplateMappings());
-            
+
         }
 
         public DbSet<Template> Template { get; set; }
