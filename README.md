@@ -1,3 +1,4 @@
+
   
 <br />
   <h3 align="center">Template ASP.NET Core API</h3>
@@ -34,7 +35,10 @@ Template using ASP.NET Core 3.1 with DDD principles (Domain Driven Design).
 * Enter credentials from your database
 File(Line 16): https://github.com/MicaelaGuimaraes/TemplateApiNetCoreDDD/blob/main/DataAccess/Context.cs
 
-* Run the Migrations command to create your database:
+* Install dotnet-ef: <br/>
+`dotnet tool install --global dotnet-ef`
+
+* Run the Migrations command to create your database: <br/>
 `dotnet ef database update`
 
 * Click the run
