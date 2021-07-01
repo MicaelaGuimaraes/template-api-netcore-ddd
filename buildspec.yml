@@ -13,7 +13,6 @@ phases:
             - dotnet restore
             - dotnet tool install --global dotnet-ef
             - echo Run migrations of EF Core on `date`
-            - dotnet tool install --global dotnet-ef
             - dotnet ef database update
       
     build:
