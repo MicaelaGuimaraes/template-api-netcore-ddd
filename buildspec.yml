@@ -10,18 +10,18 @@ phases:
   pre_build:
     commands:
       - echo Restore started on `date`
-      - dotnet restore TemplateApiDDD.Api.csproj
+      - dotnet restore
       
   build:
     commands:
       - echo Build started on `date`
-      - dotnet build TemplateApiDDD.Api.csproj
+      - dotnet build
       
   post_build:
     commands:
       - echo Publish started on `date`
       # https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/dotnet-linux-platform-bundle-app.html
-      - dotnet publish -c Release -r linux-x64 --self-contained false TemplateApiDDD.Api.csproj
+      - dotnet publish -c Release -r linux-x64 --self-contained false
       
 artifacts:
   files:
