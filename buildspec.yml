@@ -1,16 +1,10 @@
 ﻿# AWS CodeBuild spec to build an Elastic Beanstalk artifact for AWS CodePipeline to deploy
-version: 0.2
-    
+
 env:
    variables:
      PROJECT: TemplateApiDDD
-     DOTNET_CORE_RUNTIME: 3.1
 
 phases:   
-  #install:
-  #  runtime-versions:
-  #    dotnet: ${DOTNET_CORE_RUNTIME}
-      
   pre_build:
     commands:
       - echo Restore started on `date`
@@ -26,17 +20,9 @@ phases:
     commands:
       - echo Publish started on `date`
       - dotnet publish -c Release  -r linux-x64 -o ./build_output ./${PROJECT}/${PROJECT}.Api.csproj --self-contained false
-      #- cp Procfile ./build_output
 
 artifacts:
   files:
     - '**/*'
   base-directory: ./build_output
   discard-paths: no
-
-#reports:
-#  ${PROJECT}:
-#    file-format: VisualStudioTrx
-#    files:
-#      - '**/*'
-#    base-directory: './testresults'
