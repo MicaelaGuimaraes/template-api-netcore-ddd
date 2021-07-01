@@ -12,10 +12,7 @@ phases:
             - echo Restore started on `date`
             - dotnet restore
             - dotnet tool install --global dotnet-ef
-
-    migrations:
-        commands:
-            - echo RUn migrations of EF Core on `date`
+            - echo Run migrations of EF Core on `date`
             - dotnet tool install --global dotnet-ef
             - dotnet ef database update
       
