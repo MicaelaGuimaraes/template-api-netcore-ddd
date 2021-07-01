@@ -7,9 +7,9 @@ env:
      DOTNET_CORE_RUNTIME: 3.1
 
 phases:   
-  install:
-    runtime-versions:
-      dotnet: ${DOTNET_CORE_RUNTIME}
+  #install:
+  #  runtime-versions:
+  #    dotnet: ${DOTNET_CORE_RUNTIME}
       
   pre_build:
     commands:
@@ -26,7 +26,7 @@ phases:
     commands:
       - echo Publish started on `date`
       - dotnet publish -c Release  -r linux-x64 -o ./build_output ./${PROJECT}/${PROJECT}.csproj --self-contained false
-      - cp Procfile ./build_output
+      #- cp Procfile ./build_output
 
 artifacts:
   files:
