@@ -1,11 +1,15 @@
-﻿# Based on https://github.com/PrakashTrove/AWS-CodeBuild-NetCore/blob/master/buildspec.yml
-# AWS CodeBuild spec to build an Elastic Beanstalk artifact for AWS CodePipeline to deploy
+﻿# AWS CodeBuild spec to build an Elastic Beanstalk artifact for AWS CodePipeline to deploy
 version: 0.2
     
+env:
+   variables:
+     PROJECT: TemplateApiDDD
+     DOTNET_CORE_RUNTIME: 3.1
+
 phases:   
-  #install:
-  #  runtime-versions:
-  #    dotnet: latest
+  install:
+    runtime-versions:
+      dotnet: ${DOTNET_CORE_RUNTIME}
       
   pre_build:
     commands:
@@ -15,16 +19,24 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - dotnet build
+      - dotnet build -c Release
+      - dotnet test -c Release --logger trx --results-directory ./testresults
       
   post_build:
     commands:
       - echo Publish started on `date`
-      # https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/dotnet-linux-platform-bundle-app.html
-      - dotnet publish -c Release -r linux-x64 --self-contained false
-      
+      - dotnet publish -c Release  -r linux-x64 -o ./build_output ./${PROJECT}/${PROJECT}.csproj --self-contained false
+      - cp Procfile ./build_output
+
 artifacts:
   files:
     - '**/*'
-  base-directory: ./bin/Release/netcoreapp3.1/linux-x64/publish/
+  base-directory: ./build_output
   discard-paths: no
+
+reports:
+  ${PROJECT}:
+    file-format: VisualStudioTrx
+    files:
+      - '**/*'
+    base-directory: './testresults'
