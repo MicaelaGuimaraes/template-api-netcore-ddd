@@ -34,9 +34,9 @@ artifacts:
   base-directory: ./build_output
   discard-paths: no
 
-reports:
-  ${PROJECT}:
-    file-format: VisualStudioTrx
-    files:
-      - '**/*'
-    base-directory: './testresults'
+#reports:
+#  ${PROJECT}:
+#    file-format: VisualStudioTrx
+#    files:
+#      - '**/*'
+#    base-directory: './testresults'
