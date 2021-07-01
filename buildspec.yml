@@ -1,5 +1,7 @@
 ﻿# AWS CodeBuild spec to build an Elastic Beanstalk artifact for AWS CodePipeline to deploy
 
+version: 0.2
+
 env:
     variables:
         PROJECT: TemplateApiDDD
