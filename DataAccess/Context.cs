@@ -13,7 +13,7 @@ namespace DataAccess
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(
-               @"Server=database-rockeatseat.cbmgpelgfj8a.us-east-1.rds.amazonaws.com;Initial Catalog=Template;Persist Security Info=False;User ID=admin;Password=123456789;");
+               @"Server=database-ecr.cbmgpelgfj8a.us-east-1.rds.amazonaws.com;Initial Catalog=Template;Persist Security Info=False;User ID=admin;Password=123456789;");
         }
 
 
