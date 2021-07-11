@@ -97,7 +97,7 @@ namespace TemplateApiDDD
             app.UseSwagger();
             app.UseSwaggerUI(x =>
             {
-                x.SwaggerEndpoint("/swagger/v1/swagger.json", "Template Api - V1");
+                x.SwaggerEndpoint("/swagger/v1/swagger.json", "Template API - V1");
                 x.RoutePrefix = string.Empty;
             });
         }
