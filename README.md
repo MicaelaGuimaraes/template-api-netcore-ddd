@@ -6,7 +6,7 @@
   <p align="center">
     API Rest created with ASP.NET Core using DDD
     <br />
-   <a href="https://www.youtube.com/channel/UCJebwfhy_edvLfciKA7g65Q">Video how to use</a> 
+   <a href="https://www.youtube.com/watch?v=KjPYYg3h53o">Video how to use</a> 
     ·
     <a href="https://github.com/MicaelaGuimaraes/TemplateApiNetCoreDDD/issues">Report Bug</a>
     ·
